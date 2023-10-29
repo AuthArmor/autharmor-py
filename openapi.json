@@ -1,0 +1,3730 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Autharmor",
+        "description":"Auth Armor - Auth Anywhere API",
+        "version": "v4"
+    },
+    "servers": [
+        {
+            "url": "https://api.autharmor.com"
+        }
+    ],
+    "paths": {
+        "/v4/auth/magiclink_email/start": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "Auth - MagicLink Email"
+                ],
+                "summary": "  Start auth request using Maigclink Email",
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_auth_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_auth_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_auth_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_auth_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_magiclink_email_auth_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_magiclink_email_auth_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_magiclink_email_auth_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/auth/magiclink_email/validate": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "Auth - MagicLink Email"
+                ],
+                "summary": "  Validate auth request for Magiclink Email",
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_magiclink_email_auth_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_magiclink_email_auth_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_magiclink_email_auth_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_magiclink_email_auth_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_auth_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_auth_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_auth_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/auth/authenticator/start": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "Auth - Authenticator"
+                ],
+                "summary": "  Start auth request using Authenticator",
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_authenticator_auth_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_authenticator_auth_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_authenticator_auth_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_authenticator_auth_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_authenticator_auth_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_authenticator_auth_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_authenticator_auth_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/auth/authenticator/validate": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "Auth - Authenticator"
+                ],
+                "summary": " Validate auth request for Auth Armor Authenticator",
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_autharmor_authenticator_auth_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_autharmor_authenticator_auth_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_autharmor_authenticator_auth_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_autharmor_authenticator_auth_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_auth_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_auth_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_auth_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/auth/webauthn/start": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "Auth - WebAuthn"
+                ],
+                "summary": " Start auth request using Webauthn",
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_webauthn_auth_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_webauthn_auth_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_webauthn_auth_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_webauthn_auth_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_webauthn_auth_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_webauthn_auth_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_webauthn_auth_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/auth/webauthn/finish": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "Auth - WebAuthn"
+                ],
+                "summary": "  Finish auth request using WebAuthn",
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_webauthn_auth_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_webauthn_auth_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_webauthn_auth_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_webauthn_auth_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/finish_webauthn_auth_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/finish_webauthn_auth_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/finish_webauthn_auth_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/auth/webauthn/validate": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "Auth - WebAuthn"
+                ],
+                "summary": "  Validate auth request for WebAuthn",
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_webauthn_auth_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_webauthn_auth_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_webauthn_auth_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_webauthn_auth_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_auth_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_auth_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_auth_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/auth/{auth_request_id}": {
+            "get": {
+                "tags": [
+                    "autharmor",
+                    "Auth Info"
+                ],
+                "summary": "  Get Auth Info",
+                "parameters": [
+                    {
+                        "name": "auth_request_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_auth_request_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_auth_request_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_auth_request_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/registrations/authenticator/{registration_id}/validate": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - Authenticator"
+                ],
+                "summary": "  Validate User Registration for Authenticator",
+                "parameters": [
+                    {
+                        "name": "registration_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_autharmor_autenticator_registration_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_autharmor_autenticator_registration_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_autharmor_autenticator_registration_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_autharmor_autenticator_registration_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_autharmor_autenticator_registration_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_autharmor_autenticator_registration_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_autharmor_autenticator_registration_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/registrations/authenticator/start": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - Authenticator"
+                ],
+                "summary": "  Start User Registration for Authenticator",
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_autharmor_autenticator_registration_new_user_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_autharmor_autenticator_registration_new_user_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_autharmor_autenticator_registration_new_user_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_autharmor_autenticator_registration_new_user_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_autharmor_authenticator_registration_new_user_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_autharmor_authenticator_registration_new_user_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_autharmor_authenticator_registration_new_user_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/registrations/magiclink_email/start": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - Magiclink Email"
+                ],
+                "summary": "  Start User Registration for MagicLink",
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_registration_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_registration_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_registration_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_registration_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_magiclink_email_registration_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_magiclink_email_registration_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_magiclink_email_registration_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}": {
+            "put": {
+                "tags": [
+                    "autharmor",
+                    "Users"
+                ],
+                "summary": "  Update User",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/update_user_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/update_user_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/update_user_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/update_user_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/user"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/user"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/user"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            },
+            "get": {
+                "tags": [
+                    "autharmor",
+                    "Users"
+                ],
+                "summary": "  Get User By Id",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/magiclink_email/update/start": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - Magiclink Email"
+                ],
+                "summary": "  Start Change Users Email Address",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_change_magiclink_email_registration_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_change_magiclink_email_registration_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_change_magiclink_email_registration_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_change_magiclink_email_registration_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_change_magiclink_email_registration_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_change_magiclink_email_registration_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_change_magiclink_email_registration_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/registrations/magiclink_email/start": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - Magiclink Email"
+                ],
+                "summary": "  Create Magiclink Email Record for existing user",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_registration_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_registration_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_registration_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_magiclink_email_registration_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_magiclink_email_registration_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_magiclink_email_registration_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_magiclink_email_registration_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/registrations/{registration_Id}": {
+            "get": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - Get Registration Info"
+                ],
+                "summary": "  Get Registration Info",
+                "parameters": [
+                    {
+                        "name": "registration_Id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_registration_info_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_registration_info_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_registration_info_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/credentials/authenticator": {
+            "get": {
+                "tags": [
+                    "autharmor",
+                    "Users - Credentials"
+                ],
+                "summary": "  Get Users Authenticator Credential list",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page_number",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort_column",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/credentials": {
+            "get": {
+                "tags": [
+                    "autharmor",
+                    "Users - Credentials"
+                ],
+                "summary": "  Get Users Credentials list",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page_number",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort_column",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/credentials/magiclink_email": {
+            "get": {
+                "tags": [
+                    "autharmor",
+                    "Users - Credentials"
+                ],
+                "summary": "  Get Users Authenticator Credential list",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page_number",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort_column",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/credentials/webauthn": {
+            "get": {
+                "tags": [
+                    "autharmor",
+                    "Users - Credentials"
+                ],
+                "summary": "  Get Users WebAuthn Device list",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page_number",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort_column",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_credentials_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/credentials/{credential_id}": {
+            "get": {
+                "tags": [
+                    "autharmor",
+                    "Users - Credentials"
+                ],
+                "summary": "  Get Users Credential by Credential ID",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "credential_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/credential"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/credential"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/credential"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/credentials/{credential_id}/disable": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "Users - Credentials"
+                ],
+                "summary": "  Disable Users Credential by Id",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "credential_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/credential"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/credential"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/credential"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users": {
+            "get": {
+                "tags": [
+                    "autharmor",
+                    "Users"
+                ],
+                "summary": "  Get Users",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page_number",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort_column",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_users_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_users_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_users_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/registrations/magiclink_email/{registration_id}/validate": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - Magiclink Email"
+                ],
+                "summary": "  Validate MagicLink Registration Token",
+                "parameters": [
+                    {
+                        "name": "registration_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_magiclink_email_registration_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_magiclink_email_registration_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_magiclink_email_registration_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_magiclink_email_registration_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_magiclink_email_registration_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_magiclink_email_registration_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_magiclink_email_registration_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/registrations/authenticator/start": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - Authenticator"
+                ],
+                "summary": "  Start Authenticator Registration for existing user",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_autharmor_authenticator_registration_for_user_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_autharmor_authenticator_registration_for_user_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_autharmor_authenticator_registration_for_user_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/registrations/webauthn/start": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - WebAuthn"
+                ],
+                "summary": "  Start WebAuthn Registration for existing user",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_add_webauthn_to_user_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_add_webauthn_to_user_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_add_webauthn_to_user_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_add_webauthn_to_user_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_add_webauthn_to_user_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_add_webauthn_to_user_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_add_webauthn_to_user_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/registrations/webauthn/{registration_id}/validate": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - WebAuthn"
+                ],
+                "summary": "  Validate User Registration for WebAuthn",
+                "parameters": [
+                    {
+                        "name": "registration_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_webauthn_registration_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_webauthn_registration_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_webauthn_registration_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/validate_webauthn_registration_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_webauthn_registration_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_webauthn_registration_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/validate_webauthn_registration_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/registrations/webauthn/start": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - WebAuthn"
+                ],
+                "summary": "  Start WebAuthn Registration for new user",
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_new_webauthn_user_registration_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_new_webauthn_user_registration_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_new_webauthn_user_registration_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/start_new_webauthn_user_registration_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_new_webauthn_user_registration_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_new_webauthn_user_registration_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/start_new_webauthn_user_registration_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/registrations/webauthn/{registration_id}/finish": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - WebAuthn"
+                ],
+                "summary": "  Finish WebAuthn Registration for new user",
+                "parameters": [
+                    {
+                        "name": "registration_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_new_webauthn_user_registration_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_new_webauthn_user_registration_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_new_webauthn_user_registration_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_new_webauthn_user_registration_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/finish_new_webauthn_user_registration_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/finish_new_webauthn_user_registration_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/finish_new_webauthn_user_registration_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/registrations/webauthn/{registration_id}/finish": {
+            "post": {
+                "tags": [
+                    "autharmor",
+                    "User Registrations - WebAuthn"
+                ],
+                "summary": "  Finish WebAuthn Registration for existing user",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "registration_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string",
+                            "format": "uuid"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json-patch+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_add_webauthn_to_user_request"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_add_webauthn_to_user_request"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_add_webauthn_to_user_request"
+                            }
+                        },
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/finish_add_webauthn_to_user_request"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/finish_add_webauthn_to_user_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/finish_add_webauthn_to_user_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/finish_add_webauthn_to_user_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        },
+        "/v4/users/{user_id}/auth_history": {
+            "get": {
+                "tags": [
+                    "autharmor",
+                    "Users"
+                ],
+                "summary": "  Get Auth History for User",
+                "parameters": [
+                    {
+                        "name": "username",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "page_number",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "page_size",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer",
+                            "format": "int32"
+                        }
+                    },
+                    {
+                        "name": "sort_direction",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "sort_column",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_auth_history_response"
+                                }
+                            },
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_auth_history_response"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/get_user_auth_history_response"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                },
+                "security": [
+                    {
+                        "oauth2": []
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "auth_details": {
+                "type": "object",
+                "properties": {
+                    "request_details": {
+                        "$ref": "#/components/schemas/request_details"
+                    },
+                    "response_details": {
+                        "$ref": "#/components/schemas/auth_response_details"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "auth_method_use_type_response": {
+                "enum": [
+                    "biometric",
+                    "pin",
+                    "autharmor_pin",
+                    "u2f_securitykey",
+                    "u2f_usb",
+                    "u2f_lightning",
+                    "u2f_bluetooth",
+                    "u2f_nfc",
+                    "fido2_bluetooth",
+                    "fido2_usb",
+                    "fido2_lightning",
+                    "fido2_nfc",
+                    "fido2",
+                    "fido2_mobiledevice",
+                    "fido2_crossplatform",
+                    "magiclink_email"
+                ],
+                "type": "string"
+            },
+            "auth_methods": {
+                "enum": [
+                    "MobileDevice",
+                    "SecurityKey",
+                    "AuthArmorAuthenticator",
+                    "Magiclink_Email",
+                    "Maigclink_SMS",
+                    "WebAuthN"
+                ],
+                "type": "string"
+            },
+            "auth_profile_details": {
+                "type": "object",
+                "properties": {
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "auth_response": {
+                "type": "object",
+                "properties": {
+                    "auth_history_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "result_code": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "result_message": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "authorized": {
+                        "type": "boolean"
+                    },
+                    "auth_details": {
+                        "$ref": "#/components/schemas/auth_details"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "auth_response_details": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "auth_method": {
+                        "$ref": "#/components/schemas/response_auth_method"
+                    },
+                    "secure_signed_message": {
+                        "$ref": "#/components/schemas/secure_signed_message"
+                    },
+                    "mobile_device_details": {
+                        "$ref": "#/components/schemas/mobile_device_details"
+                    },
+                    "auth_profile_details": {
+                        "$ref": "#/components/schemas/auth_profile_details"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "authenticator_attachment_type": {
+                "enum": [
+                    "Any",
+                    "CrossPlatform",
+                    "Platform"
+                ],
+                "type": "string"
+            },
+            "credential": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "credential_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "date_created": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "device_type": {
+                        "$ref": "#/components/schemas/credential_type"
+                    },
+                    "enabled": {
+                        "type": "boolean"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "credential_type": {
+                "enum": [
+                    "autharmor_authenticator",
+                    "webauthn",
+                    "magiclink_email"
+                ],
+                "type": "string"
+            },
+            "enrolled_auth_method": {
+                "type": "object",
+                "properties": {
+                    "auth_method_name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "auth_method_id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "auth_method_masked_info": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "fido2_registration_data": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "attestation_object": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "client_data": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "finish_add_webauthn_to_user_request": {
+                "required": [
+                    "aa_sig",
+                    "authenticator_response_data"
+                ],
+                "type": "object",
+                "properties": {
+                    "aa_sig": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "authenticator_response_data": {
+                        "$ref": "#/components/schemas/fido2_registration_data"
+                    },
+                    "webauthn_client_id": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "finish_add_webauthn_to_user_response": {
+                "type": "object",
+                "properties": {
+                    "registration_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "finish_new_webauthn_user_registration_request": {
+                "required": [
+                    "aa_sig",
+                    "authenticator_response_data"
+                ],
+                "type": "object",
+                "properties": {
+                    "aa_sig": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "authenticator_response_data": {
+                        "$ref": "#/components/schemas/fido2_registration_data"
+                    },
+                    "webauthn_client_id": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "finish_new_webauthn_user_registration_response": {
+                "type": "object",
+                "properties": {
+                    "registration_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "finish_webauthn_auth_request": {
+                "type": "object",
+                "properties": {
+                    "authenticator_response_data": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "aa_sig": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "auth_request_id": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "webauthn_client_id": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "finish_webauthn_auth_response": {
+                "type": "object",
+                "properties": {
+                    "auth_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "auth_request_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "get_auth_request_response": {
+                "type": "object",
+                "properties": {
+                    "auth_request_status_id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "auth_request_status_name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "auth_response": {
+                        "$ref": "#/components/schemas/auth_response"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "get_registration_info_response": {
+                "type": "object",
+                "properties": {
+                    "registration_status_name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "registration_status_code": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "auth_method": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "get_user_auth_history_response": {
+                "type": "object",
+                "properties": {
+                    "auth_history_records": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/get_auth_request_response"
+                        },
+                        "nullable": true
+                    },
+                    "page_info": {
+                        "$ref": "#/components/schemas/user_auth_history_page_info"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "get_user_credentials_response": {
+                "type": "object",
+                "properties": {
+                    "credential_records": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/credential"
+                        },
+                        "nullable": true
+                    },
+                    "page_info": {
+                        "$ref": "#/components/schemas/users_credentials_response_page_info"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "get_user_response": {
+                "type": "object",
+                "properties": {
+                    "enrolled_auth_methods": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/enrolled_auth_method"
+                        },
+                        "nullable": true
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "email_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "date_created": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "get_users_response": {
+                "type": "object",
+                "properties": {
+                    "user_records": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/user"
+                        },
+                        "nullable": true
+                    },
+                    "page_info": {
+                        "$ref": "#/components/schemas/users_response_page_info"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "hash_types": {
+                "enum": [
+                    "Sha256"
+                ],
+                "type": "string"
+            },
+            "location_data": {
+                "type": "object",
+                "properties": {
+                    "latitude": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "longitude": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "ip_address": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "magiclink_email_registration_type": {
+                "enum": [
+                    "new_user",
+                    "new_enrollment",
+                    "change_email"
+                ],
+                "type": "string"
+            },
+            "mobile_device_details": {
+                "type": "object",
+                "properties": {
+                    "platform": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "model": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "request_details": {
+                "type": "object",
+                "properties": {
+                    "date": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "auth_profile_details": {
+                        "$ref": "#/components/schemas/auth_profile_details"
+                    },
+                    "origin_location_data": {
+                        "$ref": "#/components/schemas/location_data"
+                    },
+                    "auth_method": {
+                        "$ref": "#/components/schemas/auth_methods"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "resident_key_requirement_type": {
+                "enum": [
+                    "required",
+                    "preferred",
+                    "discouraged"
+                ],
+                "type": "string"
+            },
+            "response_auth_method": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "$ref": "#/components/schemas/auth_methods"
+                    },
+                    "usetype": {
+                        "$ref": "#/components/schemas/auth_method_use_type_response"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "secure_signed_message": {
+                "type": "object",
+                "properties": {
+                    "signed_data": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "signature_data": {
+                        "$ref": "#/components/schemas/signature_data"
+                    },
+                    "signed_data_type": {
+                        "$ref": "#/components/schemas/signed_message_type"
+                    },
+                    "signature_validation_details": {
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "signature_data": {
+                "type": "object",
+                "properties": {
+                    "hash_value": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "signature_data": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "auth_method_usetype": {
+                        "$ref": "#/components/schemas/auth_method_use_type_response"
+                    },
+                    "signing_method": {
+                        "$ref": "#/components/schemas/signing_method"
+                    },
+                    "auth_method": {
+                        "$ref": "#/components/schemas/auth_methods"
+                    },
+                    "hash_method": {
+                        "$ref": "#/components/schemas/hash_types"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "signed_message_type": {
+                "enum": [
+                    "AuthResponse"
+                ],
+                "type": "string"
+            },
+            "signing_method": {
+                "enum": [
+                    "AuthArmor_ECDsa",
+                    "FIDO_U2F"
+                ],
+                "type": "string"
+            },
+            "start_add_webauthn_to_user_request": {
+                "type": "object",
+                "properties": {
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "webauthn_client_id": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "attachment_type": {
+                        "$ref": "#/components/schemas/authenticator_attachment_type"
+                    },
+                    "resident_key_requirement_type": {
+                        "$ref": "#/components/schemas/resident_key_requirement_type"
+                    },
+                    "user_verification_requirement_type": {
+                        "$ref": "#/components/schemas/user_verification_requirement_type"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_add_webauthn_to_user_response": {
+                "type": "object",
+                "properties": {
+                    "fido2_json_options": {
+                        "nullable": true
+                    },
+                    "registration_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "aa_sig": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_autharmor_autenticator_registration_new_user_request": {
+                "required": [
+                    "username"
+                ],
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "maxLength": 42,
+                        "minLength": 2,
+                        "type": "string"
+                    },
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_autharmor_authenticator_registration_for_user_response": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "registration_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "date_expires": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "auth_method": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "qr_code_data": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "registration_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_autharmor_authenticator_registration_new_user_response": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "registration_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "date_expires": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "auth_method": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "qr_code_data": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "registration_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_authenticator_auth_request": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "nonce": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "send_push": {
+                        "type": "boolean"
+                    },
+                    "use_visual_verify": {
+                        "type": "boolean"
+                    },
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "origin_location_data": {
+                        "$ref": "#/components/schemas/location_data"
+                    },
+                    "action_name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "short_msg": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "ip_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_agent": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_authenticator_auth_response": {
+                "type": "object",
+                "properties": {
+                    "auth_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "auth_request_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "visual_verify_value": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "response_code": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "response_message": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "qr_code_data": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "push_message_sent": {
+                        "type": "boolean"
+                    },
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "timeout_utc_datetime": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_change_magiclink_email_registration_request": {
+                "type": "object",
+                "properties": {
+                    "new_email_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "registration_redirect_url": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "action_name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "short_msg": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "context_data": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "nullable": true
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_change_magiclink_email_registration_response": {
+                "type": "object",
+                "properties": {
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "timeout_utc_datetime": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_magiclink_email_auth_request": {
+                "type": "object",
+                "properties": {
+                    "user_id": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "origin_location_data": {
+                        "$ref": "#/components/schemas/location_data"
+                    },
+                    "action_name": {
+                        "maxLength": 32,
+                        "minLength": 2,
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "short_msg": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "auth_redirect_url": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "context_data": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "nullable": true
+                        },
+                        "nullable": true
+                    },
+                    "ip_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_agent": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_magiclink_email_auth_response": {
+                "type": "object",
+                "properties": {
+                    "auth_request_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "timeout_utc_datetime": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_magiclink_email_registration_request": {
+                "type": "object",
+                "properties": {
+                    "email_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "registration_redirect_url": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "action_name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "short_msg": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "context_data": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "nullable": true
+                        },
+                        "nullable": true
+                    },
+                    "ip_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_agent": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_magiclink_email_registration_response": {
+                "type": "object",
+                "properties": {
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "timeout_utc_datetime": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_new_webauthn_user_registration_request": {
+                "type": "object",
+                "properties": {
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "email_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "webauthn_client_id": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "attachment_type": {
+                        "$ref": "#/components/schemas/authenticator_attachment_type"
+                    },
+                    "resident_key_requirement_type": {
+                        "$ref": "#/components/schemas/resident_key_requirement_type"
+                    },
+                    "user_verification_requirement_type": {
+                        "$ref": "#/components/schemas/user_verification_requirement_type"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_new_webauthn_user_registration_response": {
+                "type": "object",
+                "properties": {
+                    "fido2_json_options": {
+                        "nullable": true
+                    },
+                    "registration_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "aa_sig": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_webauthn_auth_request": {
+                "type": "object",
+                "properties": {
+                    "user_id": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "timeout_in_seconds": {
+                        "type": "integer",
+                        "format": "int32",
+                        "nullable": true
+                    },
+                    "origin_location_data": {
+                        "$ref": "#/components/schemas/location_data"
+                    },
+                    "action_name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "short_msg": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "webauthn_client_id": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "ip_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_agent": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "nonce": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "start_webauthn_auth_response": {
+                "type": "object",
+                "properties": {
+                    "fido2_json_options": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "auth_request_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "aa_guid": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "update_user_request": {
+                "type": "object",
+                "properties": {
+                    "new_username": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "user": {
+                "type": "object",
+                "properties": {
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "email_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "date_created": {
+                        "type": "string",
+                        "format": "date-time"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "user_auth_history_page_info": {
+                "type": "object",
+                "properties": {
+                    "currnet_page_number": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "currnet_page_size": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "total_page_count": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "total_record_count": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "user_verification_requirement_type": {
+                "enum": [
+                    "required",
+                    "preferred",
+                    "discouraged"
+                ],
+                "type": "string"
+            },
+            "users_credentials_response_page_info": {
+                "type": "object",
+                "properties": {
+                    "currnet_page_number": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "currnet_page_size": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "total_page_count": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "total_record_count": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "users_response_page_info": {
+                "type": "object",
+                "properties": {
+                    "currnet_page_number": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "currnet_page_size": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "total_page_count": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "total_record_count": {
+                        "type": "integer",
+                        "format": "int64"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "validate_auth_response": {
+                "type": "object",
+                "properties": {
+                    "auth_request_status_id": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "auth_request_status_name": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "validate_auth_response_details": {
+                        "$ref": "#/components/schemas/validate_auth_response_details"
+                    }
+                },
+                "additionalProperties": false
+            },
+            "validate_auth_response_details": {
+                "type": "object",
+                "properties": {
+                    "auth_history_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "result_code": {
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    "result_message": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "authorized": {
+                        "type": "boolean"
+                    },
+                    "auth_details": {
+                        "$ref": "#/components/schemas/auth_details"
+                    },
+                    "context_data": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "nullable": true
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "validate_autharmor_autenticator_registration_request": {
+                "type": "object",
+                "properties": {
+                    "registration_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "validate_autharmor_autenticator_registration_response": {
+                "type": "object",
+                "properties": {
+                    "credential_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "validate_autharmor_authenticator_auth_request": {
+                "type": "object",
+                "properties": {
+                    "auth_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "auth_request_id": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "ip_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_agent": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "nonce": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "validate_magiclink_email_auth_request": {
+                "type": "object",
+                "properties": {
+                    "auth_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "auth_request_id": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "ip_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_agent": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "nonce": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "validate_magiclink_email_registration_request": {
+                "type": "object",
+                "properties": {
+                    "registration_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "ip_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_agent": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "validate_magiclink_email_registration_response": {
+                "type": "object",
+                "properties": {
+                    "magiclink_email_registration_type": {
+                        "$ref": "#/components/schemas/magiclink_email_registration_type"
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "email_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "context_data": {
+                        "type": "object",
+                        "additionalProperties": {
+                            "type": "string",
+                            "nullable": true
+                        },
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "validate_webauthn_auth_request": {
+                "type": "object",
+                "properties": {
+                    "auth_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "auth_request_id": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "ip_address": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "user_agent": {
+                        "type": "string",
+                        "nullable": true
+                    },
+                    "nonce": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "validate_webauthn_registration_request": {
+                "type": "object",
+                "properties": {
+                    "registration_validation_token": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            },
+            "validate_webauthn_registration_response": {
+                "type": "object",
+                "properties": {
+                    "credential_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "user_id": {
+                        "type": "string",
+                        "format": "uuid"
+                    },
+                    "username": {
+                        "type": "string",
+                        "nullable": true
+                    }
+                },
+                "additionalProperties": false
+            }
+        },
+        "securitySchemes": {
+            "oauth2": {
+                "type": "oauth2",
+                "description": "JWT Authorization header using the Bearer scheme. \\r\\n\\r\\n \n Enter 'Bearer' [space] and then your token in the text input below.\n                      \\r\\n\\r\\nExample: 'Bearer 12345abcdef'",
+                "flows": {
+                    "clientCredentials": {
+                        "tokenUrl": "https://login.autharmor.com/connect/token",
+                        "scopes": {
+                            "aarmor.api.request_auth": "Request Auth",
+                            "aarmor.api.generate_invite_code": "Generate Invite Code"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        {
+            "oauth2": [
+                "aarmor.api.request_auth",
+                "aarmor.api.generate_invite_code"
+            ]
+        }
+    ],
+    "x-readme": {
+        "explorer-enabled": true,
+        "proxy-enabled": true,
+        "samples-enabled": true
+    }
+}
+
