@@ -1,5 +1,3 @@
-# openapi-generator-cli generate --generator-name python --input-spec openapi.json --output out --package-name autharmor_python -c config.toml
-
 client_id = os.environ["client_id"]
 client_secret = os.environ["client_secret"]
 

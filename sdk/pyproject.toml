@@ -2,11 +2,11 @@
 name = "autharmor_python"
 version = "1.0.0"
 description = "Autharmor"
-authors = ["OpenAPI Generator Community <team@openapitools.org>"]
+authors = ["API Support <support@autharmor.com>"]
 license = "NoLicense"
 readme = "README.md"
 repository = "https://github.com/GIT_USER_ID/GIT_REPO_ID"
-keywords = ["OpenAPI", "OpenAPI-Generator", "Autharmor"]
+keywords = ["Authorization", "Authentication", "Autharmor"]
 include = ["autharmor_python/py.typed"]
 
 [tool.poetry.dependencies]

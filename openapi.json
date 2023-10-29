@@ -2,7 +2,13 @@
     "openapi": "3.0.1",
     "info": {
         "title": "Autharmor",
-        "description":"Auth Armor - Auth Anywhere API",
+        "description": "Autharmor provides A Suite of Authentication and Authorization tools to enhance security and accelerate your business.",
+        "contact": {
+            "name": "API Support",
+            "url": "https://www.autharmor.com/contact",
+            "email": "support@autharmor.com"
+        },
+        "termsOfService": "https://www.autharmor.com/contact",
         "version": "v4"
     },
     "servers": [
@@ -3727,4 +3733,3 @@
         "samples-enabled": true
     }
 }
-

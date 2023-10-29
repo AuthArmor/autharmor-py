@@ -6,6 +6,7 @@ dist/
 
 # pyenv
 .python-version
+.pypirc
 
 # Environments
 .env
