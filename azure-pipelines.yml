@@ -10,15 +10,9 @@ pool:
   vmImage: ubuntu-latest
 strategy:
   matrix:
-    Python27:
-      python.version: '2.7'
-    Python35:
-      python.version: '3.5'
-    Python36:
-      python.version: '3.6'
-    Python37:
-      python.version: '3.7'
-
+      Python37:
+        python.version: '3.7'
+        
 steps:
 - task: UsePythonVersion@0
   inputs:
@@ -38,5 +32,13 @@ steps:
   displayName: 'Build SDK dist'
 
 - script: |
-    python -m twine upload --repository testpypi ./sdk/dist/* --verbose 
+    python -m twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(Build.PYPI_API_TOKEN)
   displayName: 'Deploy SDK dist to testpypi'
+
+- script: |
+    python -m twine upload --repository pypi ./sdk/dist/* --verbose  --username __token__ --password $(Build.PYPI_API_TOKEN)
+  displayName: 'Deploy SDK dist to pypi'
+
+- script: |
+    pip install -i https://test.pypi.org/simple/ autharmor-python
+  displayName: 'Test install for logs'
