@@ -22,13 +22,13 @@ steps:
   displayName: 'Use Python $(python.version)'
 
 - script: |
+    cd sdk
     python -m pip install --upgrade pip
     pip install -r requirements.txt
   displayName: 'Install dependencies'
 
 - script: |
     python -m pip install --upgrade pip
-    cd sdk
     pip install build
     python -m build
   displayName: 'Build SDK dist'
