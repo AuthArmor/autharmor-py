@@ -25,20 +25,12 @@ steps:
     cd sdk
     python -m pip install --upgrade pip
     pip install -r requirements.txt
-  displayName: 'Install dependencies'
-
-- script: |
-    python -m pip install --upgrade pip
-    cd sdk
+    python -m pip install --upgrade pip    
     pip install build
     python -m build
-  displayName: 'Build SDK dist'
-
-- script: |
-    cd sdk
     pip install twine
     python -m twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(PYPI_API_TOKEN)
-  displayName: 'Deploy SDK dist to testpypi'
+  displayName: 'Build and deploy to PyPi'
 
 #- script: |
 #    python -m twine upload --repository pypi ./sdk/dist/* --verbose  --username __token__ --password $(PYPI_API_TOKEN)
