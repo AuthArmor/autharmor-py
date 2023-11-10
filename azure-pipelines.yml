@@ -29,11 +29,13 @@ steps:
 
 - script: |
     python -m pip install --upgrade pip
+    cd sdk
     pip install build
     python -m build
   displayName: 'Build SDK dist'
 
 - script: |
+    cd sdk
     python -m twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(PYPI_API_TOKEN)
   displayName: 'Deploy SDK dist to testpypi'
 
