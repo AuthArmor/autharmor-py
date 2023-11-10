@@ -36,6 +36,7 @@ steps:
 
 - script: |
     cd sdk
+    pip install twine
     python -m twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(PYPI_API_TOKEN)
   displayName: 'Deploy SDK dist to testpypi'
 
