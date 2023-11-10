@@ -29,7 +29,7 @@ steps:
     pip install build
     python -m build
     pip install twine
-    python -m twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(PYPI_API_TOKEN)
+    python -m twine upload --repository testpypi ./dist/* --verbose  --username __token__ --password $(PYPI_API_TOKEN)
   displayName: 'Build and deploy to PyPi'
 
 #- script: |
