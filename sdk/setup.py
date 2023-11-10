@@ -14,6 +14,12 @@
 
 
 from setuptools import setup, find_packages  # noqa: H301
+from pathlib import Path
+
+# Read the contents of the README file
+this_directory = Path(__file__).parent.parent
+long_description = (this_directory / "README.md").read_text()
+
 
 # To install the library, run the following
 #
@@ -43,8 +49,6 @@ setup(
     packages=find_packages(exclude=["test", "tests"]),
     include_package_data=True,
     long_description_content_type='text/markdown',
-    long_description="""\
-    Autharmor provides A Suite of Authentication and Authorization tools to enhance security and accelerate your business.
-    """,  # noqa: E501
+    long_description=long_description,  # noqa: E501
     package_data={"autharmor_python": ["py.typed"]},
 )
