@@ -21,15 +21,16 @@ steps:
     versionSpec: '$(python.version)'
   displayName: 'Use Python $(python.version)'
 
-- script: |
-    python -m pip install --upgrade pip
-    pip install -r requirements.txt
-  displayName: 'Install dependencies'
+# - script: |
+#     python -m pip install --upgrade pip
+#     pip install -r requirements.txt
+#   displayName: 'Install dependencies'
 
 - script: |
     python -m pip install --upgrade pip
     rm -r sdk
-    openapi-generator-cli generate --generator-name python --input-spec openapi.json --output sdk  --package-name autharmor_python --package-version $(Build.PACKAGE_VERSION)
+    pip install openapi-generator-cli
+    openapi-generator-cli generate --generator-name python --input-spec openapi.json --output sdk  --package-name autharmor_python --package-version $(PACKAGE_VERSION)
   displayName: 'Generate SDK dist'
 
 - script: |
@@ -39,15 +40,20 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     cd sdk
+    pip install -r requirements.txt
     pip install build
     python -m build
   displayName: 'Build SDK dist'
 
 - script: |
-    python -m twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(Build.TEST_PYPI_API_TOKEN)
+    python -m twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(TEST_PYPI_API_TOKEN)
   displayName: 'Deploy SDK dist to testpypi'
+
+# - script: |
+#     python -m twine upload --repository pypi ./sdk/dist/* --verbose  --username __token__ --password $(Build.PROD_PYPI_API_TOKEN)
+#   displayName: 'Deploy SDK dist to pypi'
 
 - script: |
     pip install -i https://test.pypi.org/simple/ autharmor-python
-    pip install autharmor-python
+    # pip install autharmor-python
   displayName: 'Test install for logs'
