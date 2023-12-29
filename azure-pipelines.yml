@@ -22,20 +22,32 @@ steps:
   displayName: 'Use Python $(python.version)'
 
 - script: |
-    cd sdk
     python -m pip install --upgrade pip
     pip install -r requirements.txt
-    python -m pip install --upgrade pip    
+  displayName: 'Install dependencies'
+
+- script: |
+    python -m pip install --upgrade pip
+    rm -r sdk
+    openapi-generator-cli generate --generator-name python --input-spec openapi.json --output sdk  --package-name autharmor_python --package-version $(Build.PACKAGE_VERSION)
+  displayName: 'Generate SDK dist'
+
+- script: |
+    echo "Yet to be implemented - requires extensive testing"
+  displayName: 'Modify SDK setup file'
+
+- script: |
+    python -m pip install --upgrade pip
+    cd sdk
     pip install build
     python -m build
-    pip install twine
-    python -m twine upload --repository testpypi ./dist/* --verbose  --username __token__ --password $(PYPI_API_TOKEN)
-  displayName: 'Build and deploy to PyPi'
+  displayName: 'Build SDK dist'
 
-#- script: |
-#    python -m twine upload --repository pypi ./sdk/dist/* --verbose  --username __token__ --password $(PYPI_API_TOKEN)
-#  displayName: 'Deploy SDK dist to pypi'
+- script: |
+    python -m twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(Build.TEST_PYPI_API_TOKEN)
+  displayName: 'Deploy SDK dist to testpypi'
 
 - script: |
     pip install -i https://test.pypi.org/simple/ autharmor-python
+    pip install autharmor-python
   displayName: 'Test install for logs'
