@@ -27,8 +27,8 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     rm -r sdk
-    pip install openapi-generator-cli
-    python -m openapi-generator-cli generate --generator-name python --input-spec openapi.json --output sdk  --package-name autharmor_python --package-version $(Build.PACKAGE_VERSION)
+    pip install openapigenerator
+    python -m openapi-generator generate --generator-name python --input-spec openapi.json --output sdk  --package-name autharmor_python --package-version $(Build.PACKAGE_VERSION)
   displayName: 'Generate SDK dist'
 
 - script: |
@@ -53,5 +53,4 @@ steps:
 
 - script: |
     pip install -i https://test.pypi.org/simple/ autharmor-python
-    # pip install autharmor-python
   displayName: 'Test install for logs'
