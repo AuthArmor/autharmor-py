@@ -27,8 +27,8 @@ steps:
 - script: |
     python -m pip install --upgrade pip
     rm -r sdk
-    pip install openapigenerator
-    python -m openapi-generator generate --generator-name python --input-spec openapi.json --output sdk  --package-name autharmor_python --packageVersion $(Build.PACKAGE_VERSION)
+    pip install open-api-generator-cli
+    openapi-generator generate --generator-name python --input-spec openapi.json --output sdk  --package-name autharmor_python -p packageVersion=1.0.0,packageName=autharmor_python
   displayName: 'Generate SDK dist'
 
 - script: |
@@ -44,7 +44,8 @@ steps:
   displayName: 'Build SDK dist'
 
 - script: |
-    python -m twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(Build.TEST_PYPI_API_TOKEN)
+    pip install twine
+    twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(Build.TEST_PYPI_API_TOKEN)
   displayName: 'Deploy SDK dist to testpypi'
 
 # - script: |
