@@ -32,7 +32,8 @@ steps:
   displayName: 'Generate SDK dist'
 
 - script: |
-    echo "Yet to be implemented - requires extensive testing"
+    echo "Modifies the generated sdks setup.py from line 26 to replace with custom content."
+    python py .github/post-build-ops.py
   displayName: 'Modify SDK setup file'
 
 - script: |

@@ -32,4 +32,4 @@ setup(
     package_data={"autharmor_python": ["py.typed"]},
 )
 """
-replace_contents_from_line("../sdk/setup.py", new_content, 26)
+replace_contents_from_line("./sdk/setup.py", new_content, 26)
