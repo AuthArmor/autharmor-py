@@ -14,12 +14,6 @@
 
 
 from setuptools import setup, find_packages  # noqa: H301
-from pathlib import Path
-
-# Read the contents of the README file
-this_directory = Path(__file__).parent.parent
-long_description = (this_directory / "README.md").read_text()
-
 
 # To install the library, run the following
 #
@@ -37,6 +31,12 @@ REQUIRES = [
     "aenum"
 ]
 
+
+# Read the contents of the README file
+from pathlib import Path
+this_directory = Path(__file__).parent.parent
+long_description = (this_directory / "README.md").read_text()
+
 setup(
     name=NAME,
     version=VERSION,
@@ -52,3 +52,4 @@ setup(
     long_description=long_description,  # noqa: E501
     package_data={"autharmor_python": ["py.typed"]},
 )
+
