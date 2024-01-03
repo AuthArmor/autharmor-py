@@ -46,7 +46,8 @@ steps:
   displayName: 'Build SDK dist'
 
 - script: |
-    python -m twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(TEST_PYPI_API_TOKEN)
+    pip install twine
+    twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(TEST_PYPI_API_TOKEN)
   displayName: 'Deploy SDK dist to testpypi'
 
 # - script: |
