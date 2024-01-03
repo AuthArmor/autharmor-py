@@ -49,9 +49,11 @@ steps:
     twine upload --repository testpypi ./sdk/dist/* --verbose  --username __token__ --password $(Build.TEST_PYPI_API_TOKEN)
   displayName: 'Deploy SDK dist to testpypi'
 
-# - script: |
-#     python -m twine upload --repository pypi ./sdk/dist/* --verbose  --username __token__ --password $(Build.PROD_PYPI_API_TOKEN)
-#   displayName: 'Deploy SDK dist to pypi'
+- script: |
+    pip install twine
+    python -m twine upload --repository pypi ./sdk/dist/* --verbose  --username __token__ --password $(Build.PROD_PYPI_API_TOKEN)
+  displayName: 'Deploy SDK dist to pypi'
+  condition: and(succeeded(), ne(variables['Build.PROD_PYPI_API_TOKEN'], ''))
 
 - script: |
     pip install -i https://test.pypi.org/simple/ autharmor-python
